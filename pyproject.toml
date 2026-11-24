@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beyondroadneighbors"
+version = "1.0.0"
+description = "Coverage before precision: distributed equilibrium-aware gradients for regional AV coordination under limited communication (EPDA)."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Luyao Niu", email = "luyaoniu@usc.edu" }, { name = "Ruolin Li", email = "ruolinl@usc.edu" }]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "scipy>=1.11", "networkx>=3.2"]
+keywords = ["multiagent coordination", "traffic equilibrium", "implicit differentiation",
+            "limited communication", "autonomous vehicles", "evacuation"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+[project.optional-dependencies]
+figures = ["matplotlib>=3.8"]
+test = ["pytest>=7"]
+
+[project.urls]
+Repository = "https://github.com/LiviaNiu620/BeyondRoadNeighbors"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,5 @@
+risk objective: {'network': 'Anaheim', 'rho': 2.0, 'ell': 2.0, 'K': 16, 'fire_region': 5, 'fire_demand_rank': 1, 'fire_links': 41, 'links_w_over_1_5': 127, 'mean_w': 1.2668502551361902, 'max_w': 3.0}
+0.3:0 relay cov 1.00 30 5.521% 14.1 Mbit hop-charged 29.0 Mbit 213s
+0.3:0 neighbour cov 0.23 4 2.339% 106.7 Mbit hop-charged 106.7 Mbit 204s
+0.3:1 relay cov 0.88 30 4.138% 12.1 Mbit hop-charged 29.1 Mbit 218s
+0.3:1 neighbour cov 0.16 30 2.412% 82.8 Mbit hop-charged 82.8 Mbit 148s

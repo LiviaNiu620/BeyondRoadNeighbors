@@ -1,0 +1,1 @@
+{"config": "unaware-full", "theta": 0.32, "demand_scale": 2.0, "n_regions": 16, "gamma_exact": 7.014748859155452, "response_share": 0.6157416208404263, "response_bound": 0.8752300268451114, "outer_iterations": 28, "tstt": 8612787.267869858, "initial_tstt": 9255595.19368703, "tstt_improvement": -0.06945073897091047, "seconds": 174.94030641300014}

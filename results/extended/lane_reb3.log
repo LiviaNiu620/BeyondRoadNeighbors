@@ -1,0 +1,35 @@
++ O=../../results/rebuttal
++ python3 -u run_risk.py --rho 2 --demand-scale 2 probe_bounds.py --theta 0.32 --out ../../results/rebuttal/bounds_high_Anaheim_K16.json
+risk objective: {'network': 'Anaheim', 'rho': 2.0, 'ell': 2.0, 'K': 16, 'fire_region': 5, 'fire_demand_rank': 1, 'fire_links': 41, 'links_w_over_1_5': 127, 'mean_w': 1.2668502551361902, 'max_w': 3.0}
+{'network': 'Anaheim', 'K': 16, 'theta': 0.32, 'gamma_exact': 7.01474885915545, 'gamma_cs': 84.42230347860307, 'gamma_cs_regional': 256.8880926728324, 'gamma_sharp': 17.557781252815158, 'gamma_sharp_regional': 46.04383164844019}
+{'compressor': 'float64', 'rounds': 1, 'cgN': 0.6054002196086251, 'cheb_exact': 0.28687689063989374, 'cheb_sharp': 0.5176316476519989, 'cheb_sharp_reg': 0.7383016489671858}
+{'compressor': 'float64', 'rounds': 2, 'cgN': 0.25326525267379985, 'cheb_exact': 0.13871751473984137, 'cheb_sharp': 0.2966252656240341, 'cheb_sharp_reg': 0.5540629496847358}
+{'compressor': 'float64', 'rounds': 3, 'cgN': 0.1421358338646808, 'cheb_exact': 0.06973074634197828, 'cheb_sharp': 0.17991878568906422, 'cheb_sharp_reg': 0.40201785559397507}
+{'compressor': 'float64', 'rounds': 4, 'cgN': 0.06291658512804071, 'cheb_exact': 0.03559906274578905, 'cheb_sharp': 0.1196056871844164, 'cheb_sharp_reg': 0.281261699303743}
+{'compressor': 'float64', 'rounds': 6, 'cgN': 0.009336624870794239, 'cheb_exact': 0.00935168634847906, 'cheb_sharp': 0.049055366570197066, 'cheb_sharp_reg': 0.15396741102450617}
+{'compressor': 'uniform8', 'rounds': 1, 'cgN': 0.6052760708134476, 'cheb_exact': 0.28673233699551287, 'cheb_sharp': 0.517595637658784, 'cheb_sharp_reg': 0.7382870959737855}
+{'compressor': 'uniform8', 'rounds': 2, 'cgN': 0.2534024300888403, 'cheb_exact': 0.1393684062404363, 'cheb_sharp': 0.2968177564626111, 'cheb_sharp_reg': 0.5540655774371029}
+{'compressor': 'uniform8', 'rounds': 3, 'cgN': 0.14171510295198975, 'cheb_exact': 0.06969674863864546, 'cheb_sharp': 0.1793997141547998, 'cheb_sharp_reg': 0.4021790214631792}
+{'compressor': 'uniform8', 'rounds': 4, 'cgN': 0.0628386100791809, 'cheb_exact': 0.035583912777068676, 'cheb_sharp': 0.11920376614192942, 'cheb_sharp_reg': 0.28137346665508645}
+{'compressor': 'uniform8', 'rounds': 6, 'cgN': 0.010466050431523684, 'cheb_exact': 0.010909064179260927, 'cheb_sharp': 0.048662697140902364, 'cheb_sharp_reg': 0.15391518304030508}
+{'compressor': 'uniform6', 'rounds': 1, 'cgN': 0.6036558665644234, 'cheb_exact': 0.282930870775686, 'cheb_sharp': 0.5177564769020493, 'cheb_sharp_reg': 0.7382284765932775}
+{'compressor': 'uniform6', 'rounds': 2, 'cgN': 0.24988700033889605, 'cheb_exact': 0.13930853343921884, 'cheb_sharp': 0.2965626401148195, 'cheb_sharp_reg': 0.5540785714724539}
+{'compressor': 'uniform6', 'rounds': 3, 'cgN': 0.1418196203390765, 'cheb_exact': 0.0723688351400874, 'cheb_sharp': 0.18187577407184824, 'cheb_sharp_reg': 0.4018226689874339}
+{'compressor': 'uniform6', 'rounds': 4, 'cgN': 0.059904701858085496, 'cheb_exact': 0.03777914381359032, 'cheb_sharp': 0.12402582389188214, 'cheb_sharp_reg': 0.2811699099513985}
+{'compressor': 'uniform6', 'rounds': 6, 'cgN': 0.020471274240910192, 'cheb_exact': 0.012587286475978373, 'cheb_sharp': 0.05268152571889804, 'cheb_sharp_reg': 0.15658405917288565}
+seconds 30.464738368988037
+++ python3 -c '
+import json,math
+g=json.load(open('\''../../results/rebuttal/bounds_high_Anaheim_K16.json'\''))['\''gamma_sharp'\'']
+k=1+g; r=(math.sqrt(k)-1)/(math.sqrt(k)+1)
+print(next(R for R in range(1,500) if math.sqrt(2)*(1+3*r)*R*r**(R-1)<=1e-2))'
++ R=21
++ echo 'high-load certified SR rounds: 21'
+high-load certified SR rounds: 21
++ python3 -u run_risk.py --rho 2 run_v2.py --network Anaheim --k 16 --outer 30 --only RichP:q8+r5+warm --out ../../results/rebuttal/richP_base_Anaheim_K16.jsonl
+risk objective: {'network': 'Anaheim', 'rho': 2.0, 'ell': 2.0, 'K': 16, 'fire_region': 5, 'fire_demand_rank': 1, 'fire_links': 41, 'links_w_over_1_5': 127, 'mean_w': 1.2668502551361902, 'max_w': 3.0}
+upstream=/home/claude/env_snap/Mixed_Autonomy_Traffic_Assignment
+network=Anaheim links=914 paths=4218 groups=1406 coordinates=2812 K=16
+partition: {'n_regions': 16, 'road_adjacency_edges': 34, 'coupling_edges': 120, 'coupled_not_adjacent': 86, 'mean_senders': 15.0}
+
+config         iters           TSTT   vs exact  vs start     Gbit      stat      s

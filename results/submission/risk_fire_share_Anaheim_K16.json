@@ -1,0 +1,21 @@
+{
+ "fire_region": 5,
+ "n_pairs": 240,
+ "n_omitted": 172,
+ "fire_road_neighbors": [
+  6,
+  11
+ ],
+ "tstt": {
+  "omitted_share": 0.6624004682601781,
+  "fire_share_all": 0.09515091903803159,
+  "fire_share_of_omitted": 0.07770008955839044,
+  "fire_involved_share_of_omitted": 0.21563377390242275
+ },
+ "exposure": {
+  "omitted_share": 0.5815639119161177,
+  "fire_share_all": 0.40581600108160204,
+  "fire_share_of_omitted": 0.37847595778385174,
+  "fire_involved_share_of_omitted": 0.4607174358567514
+ }
+}

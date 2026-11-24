@@ -1,0 +1,23 @@
+risk objective: {'network': 'Anaheim', 'rho': 2.0, 'ell': 2.0, 'K': 16, 'fire_region': 5, 'fire_demand_rank': 1, 'fire_links': 41, 'links_w_over_1_5': 127, 'mean_w': 1.2668502551361902, 'max_w': 3.0}
+{'a_cos_unaware_stacked': 0.706, 'a_cos_unaware_av': 0.9985, 'a_norm_ratio_b_over_Clam': 7.073, 'a_flux_total': 0.6762, 'a_flux_response_part': 0.1313, 'a_flux_direct_part': 0.7845, 'a_err_road': 0.6788, 'a_err_road_if_direct_restored': 0.1589, 'a_err_road_if_response_restored': 0.7176}
+{'d_err_keep68_exact_rank': 0.1888, 'd_err_keep68_approx_rank': 0.1888, 'd_overlap68': 1.0, 'd_err_keep120_exact_rank': 0.0678, 'd_err_keep120_approx_rank': 0.0678, 'd_overlap120': 1.0, 'd_spearman_flux_exact_vs_approx': 1.0, 'd_approx_adjoint_err': 0.0075}
+{'coverage': 0.25, 'compressor': 'uniform4', 'mbit': 0.108816, 'grad_err': 0.3284361140072551, 'cosine': 0.9464425211556938}
+{'coverage': 0.25, 'compressor': 'uniform6', 'mbit': 0.151576, 'grad_err': 0.319599911167795, 'cosine': 0.9493122103222074}
+{'coverage': 0.25, 'compressor': 'uniform8', 'mbit': 0.194336, 'grad_err': 0.3198903871721048, 'cosine': 0.949058584566558}
+{'coverage': 0.25, 'compressor': 'uniform16', 'mbit': 0.365376, 'grad_err': 0.3200614819933402, 'cosine': 0.949027132260431}
+{'coverage': 0.25, 'compressor': 'float64', 'mbit': 1.372416, 'grad_err': 0.3200620222099984, 'cosine': 0.9490270330499925}
+{'coverage': 0.5, 'compressor': 'uniform4', 'mbit': 0.172736, 'grad_err': 0.2093560895544548, 'cosine': 0.9780581554919222}
+{'coverage': 0.5, 'compressor': 'uniform6', 'mbit': 0.237856, 'grad_err': 0.19769609279719128, 'cosine': 0.9804216869414885}
+{'coverage': 0.5, 'compressor': 'uniform8', 'mbit': 0.302976, 'grad_err': 0.19792734688111263, 'cosine': 0.980328714573197}
+{'coverage': 0.5, 'compressor': 'uniform16', 'mbit': 0.563456, 'grad_err': 0.198012825874585, 'cosine': 0.9803136819746628}
+{'coverage': 0.5, 'compressor': 'float64', 'mbit': 2.087936, 'grad_err': 0.19801334461598205, 'cosine': 0.9803135950908295}
+{'coverage': 0.75, 'compressor': 'uniform4', 'mbit': 0.225856, 'grad_err': 0.1091563594937902, 'cosine': 0.9942486629270499}
+{'coverage': 0.75, 'compressor': 'uniform6', 'mbit': 0.307936, 'grad_err': 0.0847969724335132, 'cosine': 0.9965585254069952}
+{'coverage': 0.75, 'compressor': 'uniform8', 'mbit': 0.390016, 'grad_err': 0.08313979483307231, 'cosine': 0.9966415040358757}
+{'coverage': 0.75, 'compressor': 'uniform16', 'mbit': 0.718336, 'grad_err': 0.08312616892096177, 'cosine': 0.9966507358634118}
+{'coverage': 0.75, 'compressor': 'float64', 'mbit': 2.630656, 'grad_err': 0.08312639056464356, 'cosine': 0.9966507362931133}
+{'coverage': 1.0, 'compressor': 'uniform4', 'mbit': 0.276816, 'grad_err': 0.07799812689311583, 'cosine': 0.9969740017885194}
+{'coverage': 1.0, 'compressor': 'uniform6', 'mbit': 0.374776, 'grad_err': 0.01593396648791178, 'cosine': 0.9998784010733556}
+{'coverage': 1.0, 'compressor': 'uniform8', 'mbit': 0.472736, 'grad_err': 0.005773003387453216, 'cosine': 0.9999834419369581}
+{'coverage': 1.0, 'compressor': 'uniform16', 'mbit': 0.864576, 'grad_err': 0.004242513612716229, 'cosine': 0.9999910006635933}
+{'coverage': 1.0, 'compressor': 'float64', 'mbit': 3.138816, 'grad_err': 0.004240461678174843, 'cosine': 0.9999910093487056}

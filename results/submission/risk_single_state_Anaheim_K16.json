@@ -1,0 +1,33 @@
+{
+ "info": {
+  "rho": 2.0,
+  "ell": 2.0,
+  "K": 16,
+  "fire_region": 5,
+  "fire_links": 41,
+  "links_w_over_1_5": 127,
+  "mean_w": 1.2668502551361902,
+  "max_w": 3.0
+ },
+ "A_unchanged": 0.0,
+ "tstt": {
+  "road_err": 0.769715376522712,
+  "road_cos": 0.6564197180513707,
+  "flux_direct": 0.9367010519526742,
+  "flux_resp": 0.16431451742753345,
+  "flux_share_into_fire_region": 0.09515091903803159
+ },
+ "exposure": {
+  "road_err": 0.6788009841538802,
+  "road_cos": 0.7365685881448386,
+  "flux_direct": 0.7845497397111496,
+  "flux_resp": 0.13126444281385147,
+  "flux_share_into_fire_region": 0.40581600108160204
+ },
+ "overlap_top68": 0.8676470588235294,
+ "exposure_err_keep68_own_rank": 0.18882933279055408,
+ "exposure_err_keep68_tstt_rank": 0.17596980343805466,
+ "overlap_top120": 0.9166666666666666,
+ "exposure_err_keep120_own_rank": 0.06784471643330212,
+ "exposure_err_keep120_tstt_rank": 0.060303820322886996
+}

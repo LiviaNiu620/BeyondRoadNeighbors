@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "Beyond Road Neighbors: Preserving Cross-Region AV Coordination under Limited Communication"
+authors:
+  - family-names: Niu
+    given-names: Luyao
+    affiliation: University of Southern California
+  - family-names: Li
+    given-names: Ruolin
+    affiliation: University of Southern California
+license: MIT
+repository-code: "https://github.com/LiviaNiu620/BeyondRoadNeighbors"
+version: 1.0.0
+date-released: 2026-11-24
+keywords:
+  - multiagent coordination
+  - limited communication
+  - traffic equilibrium
+  - implicit differentiation
+  - autonomous vehicles

@@ -1,0 +1,9 @@
+risk objective: {'network': 'SiouxFalls', 'rho': 2.0, 'ell': 2.0, 'K': 8, 'fire_region': 2, 'fire_demand_rank': 1, 'fire_links': 12, 'links_w_over_1_5': 76, 'mean_w': 2.684954042047078, 'max_w': 3.0}
+upstream=/home/claude/env_snap/Mixed_Autonomy_Traffic_Assignment
+network=SiouxFalls links=76 paths=1584 groups=528 coordinates=1056 K=8
+partition: {'n_regions': 8, 'road_adjacency_edges': 14, 'coupling_edges': 28, 'coupled_not_adjacent': 14, 'mean_senders': 7.0}
+
+config         iters           TSTT   vs exact  vs start     Gbit      stat      s
+N:q8+r2+warm+res    30    27926170.73        nan   -36.31%    0.004  9.15e-02   51.3
+
+wrote 1 records to ../../results/revision/res_SF8.jsonl.tmp

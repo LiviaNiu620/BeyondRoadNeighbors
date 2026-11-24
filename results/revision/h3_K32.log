@@ -1,0 +1,10 @@
+risk objective: {'network': 'Anaheim', 'rho': 2.0, 'ell': 2.0, 'K': 16, 'fire_region': 5, 'fire_demand_rank': 1, 'fire_links': 41, 'links_w_over_1_5': 127, 'mean_w': 1.2668502551361902, 'max_w': 3.0}
+upstream=/home/claude/env_snap/Mixed_Autonomy_Traffic_Assignment
+network=Anaheim links=914 paths=4218 groups=1406 coordinates=2812 K=32
+partition: {'n_regions': 32, 'road_adjacency_edges': 82, 'coupling_edges': 459, 'coupled_not_adjacent': 383, 'mean_senders': 22.96875}
+
+config         iters           TSTT   vs exact  vs start     Gbit      stat      s
+road2N@1e-6+warm+res     3     1852443.58        nan    -3.93%    0.082  1.75e-01  135.1
+road3N@1e-6+warm+res    29     1836622.76        nan    -4.75%    0.287  9.14e-02  135.1
+
+wrote 2 records to ../../results/revision/h3_K32.jsonl.tmp
