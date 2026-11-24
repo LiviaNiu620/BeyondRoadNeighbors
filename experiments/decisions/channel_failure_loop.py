@@ -4,7 +4,7 @@ import numpy as np
 from brn.experiments.common import *  # noqa
 import brn.outer as outer_mod
 from brn import DCSIIGOptions, run_dcsiig
-from brn.objective_contract import result_metadata
+from brn.records import result_metadata
 ap = argparse.ArgumentParser(); ap.add_argument("--k", type=int, default=16)
 ap.add_argument("--failures", required=True); ap.add_argument("--scenarios", required=True,
                help="comma list p:draw"); ap.add_argument("--outer", type=int, default=30)
@@ -34,7 +34,7 @@ for sc in args.scenarios.split(","):
                              cg_tolerance=1e-13, gradient_form="residual")
         t0 = time.perf_counter()
         res = run_dcsiig(problem, coords, dec, opts, av0, lg0)
-        rec = {**{**result_metadata("cooperative_outer"), "model_version": "v2"}, "scenario": sc, "p": p, "draw": d,
+        rec = {**result_metadata("cooperative_outer"), "scenario": sc, "p": p, "draw": d,
                "rule": rule, "components": rec_relay["components"], "coverage": len(chans) / len(dep),
                "hop_multiplier": mult, "outer_iterations": res.iterations, "tstt": res.tstt,
                "initial_tstt": res.initial_tstt, "tstt_improvement": res.tstt / res.initial_tstt - 1.0,

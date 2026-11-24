@@ -7,7 +7,7 @@ the gradient oracle differs. Bits per attempt are constant (one state exchange).
 import argparse, json, time
 import numpy as np
 from brn.experiments.common import *  # noqa
-from brn.objective_contract import result_metadata
+from brn.records import result_metadata
 from brn.sue.operators import bpr_link_costs, link_flows_from_paths, total_system_travel_time
 from brn.sue.projection import projected_av_step
 from brn.experiments.state_sharing import Format, StateSystem, protocol_bits, shared_gradient
@@ -58,7 +58,7 @@ for proto in args.protocols.split(","):
         av, lg, hdv, tstt = step.flow, cl, nh, nt; accepted += 1
         if tstt < best[0]: best = (tstt, av.copy(), lg.copy())
         trace.append(tstt); bits_trace.append(attempts * per["total_bits"])
-    rec = {**{**result_metadata("cooperative_outer"), "model_version": "v2"},
+    rec = {**result_metadata("cooperative_outer"),
            "config": proto, "kind": kind, "format": spec, "network": args.network, "n_regions": args.k,
            "theta": args.theta, "demand_scale": args.demand_scale, "start_mode": args.start, "start_seed": args.seed, "outer_budget": args.outer, "attempts": attempts, "outer_iterations": accepted,
            "tstt": best[0], "initial_tstt": init, "tstt_improvement": best[0] / init - 1.0,

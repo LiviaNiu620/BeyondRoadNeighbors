@@ -17,5 +17,4 @@ job risk_gamma_share                env OUT="$DIR/risk_gamma_share.json" $RUN --
 job risk_fire_share_Anaheim_K16     env BRN_OUTPUTS="$DIR" $RUN --rho 2 $S/fire_zone_flux.py                                  # Sec. 6.3
 job risk_fire_sensitivity_Anaheim_K16 env BRN_OUTPUTS="$DIR" $RUN --rho 2 $S/fire_zone_sensitivity.py                         # Sec. 6.3, 6.5
 job risk_agents_Anaheim             $RUN --rho 2 $S/per_authority_alignment.py --out "$DIR/risk_agents_Anaheim.jsonl"         # Sec. 6.2
-job risk_direction_Anaheim          env OUT="$DIR/risk_direction_Anaheim.jsonl" $RUN --rho 2 $S/gradient_direction.py
 job risk_failures_Anaheim_K16       $RUN --rho 2 $S/channel_failures.py --out "$DIR/risk_failures_Anaheim_K16.jsonl"          # Fig. 5

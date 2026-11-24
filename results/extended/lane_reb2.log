@@ -1,8 +1,0 @@
-+ O=../../results/rebuttal
-+ python3 -u run_risk.py --rho 2 --demand-scale 2 run_v2.py --network Anaheim --k 16 --outer 30 --theta 0.32 --only road2,road3,relay:N:q8+r2+warm,relay:N:q8+r4+warm,N:q8+r2+warm+res,N:q8+r4+warm+res --out ../../results/rebuttal/high_Anaheim_K16.jsonl
-risk objective: {'network': 'Anaheim', 'rho': 2.0, 'ell': 2.0, 'K': 16, 'fire_region': 5, 'fire_demand_rank': 1, 'fire_links': 41, 'links_w_over_1_5': 127, 'mean_w': 1.2668502551361902, 'max_w': 3.0}
-upstream=/home/claude/env_snap/Mixed_Autonomy_Traffic_Assignment
-network=Anaheim links=914 paths=4218 groups=1406 coordinates=2812 K=16
-partition: {'n_regions': 16, 'road_adjacency_edges': 34, 'coupling_edges': 120, 'coupled_not_adjacent': 86, 'mean_senders': 15.0}
-
-config         iters           TSTT   vs exact  vs start     Gbit      stat      s

@@ -59,7 +59,7 @@ reduction of exposure-weighted travel time (%), total communication in Mbit in p
 git clone https://github.com/LiviaNiu620/BeyondRoadNeighbors.git
 cd BeyondRoadNeighbors
 python -m venv .venv && source .venv/bin/activate
-pip install -e ".[figures,test]"          # numpy, scipy, networkx, matplotlib, pytest
+pip install -e ".[test]"                  # numpy, scipy, networkx, pytest
 ```
 
 The paper's runs used Python 3.13.3, NumPy 2.5.3 and SciPy 1.18.1; `make check` confirms that a
@@ -71,7 +71,6 @@ fresh install reproduces archived records to at least nine significant digits.
 make test        # theory checks on SiouxFalls (Prop. 1, Thms. 2 and 4, Lemma 7): ~5 s
 make example     # the silent failure and EPDA on one equilibrium state: ~5 s
 make numbers     # regenerate every non-figure number of the paper from results/ and diff
-make figures     # Figures 1-5 from results/ into figures/
 make check       # rerun Table 2 and one Table 3 cell, compare with the archived records: ~5 min
 ```
 
@@ -105,8 +104,8 @@ experiments/             one script per experiment
   certificates/            spectral bounds, a posteriori and gradient certificates (Appendix D.2)
   jobs/                    shell scripts that rerun each table or figure
 results/                 archived run records behind every number of the paper (read-only)
-paper/                   make_numbers.py, make_figures.py, expected/ (the paper's generated LaTeX)
-figures/                 Figures 1-5 as regenerated from results/
+paper/                   make_numbers.py and expected/ (the paper's generated LaTeX)
+figures/                 Figures 1-5 of the paper
 data/tntp/               Anaheim and SiouxFalls networks and trip tables
 tests/                   pytest checks of the theory and of the number generator
 tools/compare_records.py field-by-field comparison of a new run with an archived record

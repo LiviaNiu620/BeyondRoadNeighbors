@@ -1,9 +1,9 @@
 PY ?= python
 
-.PHONY: install test example numbers figures check table1 table3 single-state appendix reproduce clean
+.PHONY: install test example numbers check table1 table3 single-state appendix reproduce clean
 
-install:          ## editable install with figure and test extras
-	$(PY) -m pip install -e ".[figures,test]"
+install:          ## editable install with test extras
+	$(PY) -m pip install -e ".[test]"
 
 test:             ## theory checks on SiouxFalls and the number generator
 	$(PY) -m pytest -q
@@ -16,9 +16,6 @@ numbers:          ## regenerate the paper numbers from results/ and diff against
 	diff -u paper/expected/numbers.tex paper/generated/numbers.tex
 	diff -u paper/expected/appendix_results.tex paper/generated/appendix_results.tex
 	@echo "numbers.tex and appendix_results.tex match the paper"
-
-figures:          ## Figures 1-5 from results/ into figures/
-	$(PY) paper/make_figures.py figures
 
 check:            ## rerun Table 2 and one Table 3 cell and compare with the archived records
 	bash experiments/jobs/smoke.sh

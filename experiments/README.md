@@ -47,12 +47,11 @@ Protocol labels for `decision_loop.py --only` (comma-separated):
 | `coverage_vs_precision.py` | coverage × precision frontier; direct vs response omission; flux ranking from EPDA's own adjoint | Fig. 2, Sec. 6.3 |
 | `locality.py` | influence by road distance for each ordered pair of authorities | Fig. 3(a) |
 | `congestion_correction.py` | relative congestion-induced adjoint correction vs γ* | Fig. 3(b), Prop. 5 |
-| `response_share.py` | direct and response parts of the omitted flux across loads | Sec. 6.3 |
 | `fire_zone_flux.py`, `fire_zone_sensitivity.py` | fire-zone share of the dependency flux; five fire zones × three weights | Sec. 6.3, 6.5 |
 | `per_authority_alignment.py` | cosine of each authority's gradient block with the exact one | Sec. 6.2 |
 | `protocol_frontier.py` | gradient error vs payload for coordinator, broadcast and EPDA | Fig. 4 |
 | `channel_failures.py` | adjoint error under random road-channel failures, relay vs neighbor-only | Fig. 5 |
-| `gradient_direction.py`, `flux_ranked_pruning.py`, `exposure_single_state.py` | supporting checks of gradient direction, flux-ranked pruning and the exposure objective | Sec. 6.2–6.3 |
+| `exposure_single_state.py` | fire-zone share of all dependency flux under exposure weights and TSTT | Sec. 6.3 |
 
 ## Certificates (`certificates/`)
 
@@ -62,7 +61,6 @@ Protocol labels for `decision_loop.py --only` (comma-separated):
 | `gradient_certificate.py` | Lemma 7 (a posteriori) and Corollary 8 (gradient error) on 8-bit CG | Table `tab:apost` |
 | `residual_gap_certificate.py` | residual-gap certificate for quantized CG | App. D.2 |
 | `quantization_and_route_length.py` | size of the quantization term of Proposition 6(ii); regions crossed per route | App. D.5 |
-| `spectrum.py` | spectrum of $N^{-1}A$ and solver accuracy by round | Sec. 5 |
 
 ## Provenance
 
@@ -71,5 +69,4 @@ names cleaned up; numerical code is unchanged. Earlier names: `decision_loop.py`
 `run_v2.py`, `state_sharing_loop.py` ← `run_state_sharing_outer.py`, `drivers_fixed_loop.py` ←
 `run_unaware_outer.py`, `channel_failure_loop.py` ← `run_failure_outer.py`, single-state and
 certificate scripts ← `probe_*.py`, `run.py` ← `run_risk.py`, `brn.experiments.exposure` ←
-`risk.py`, `brn.experiments.demand` ← `scaled.py`. The `.log` files in `results/` show the
-original commands.
+`risk.py`, `brn.experiments.demand` ← `scaled.py`.

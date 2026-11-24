@@ -31,7 +31,7 @@ from brn import (  # noqa: E402
     tntp_dir,
 )
 
-from brn.objective_contract import result_metadata
+from brn.records import result_metadata
 from brn.partition import road_relay_multiplier
 from brn.paths import OUTPUTS
 
@@ -291,7 +291,7 @@ def main() -> int:
         ledger_dict = result.ledger if isinstance(result.ledger, dict) else result.ledger.as_dict()
         hop_charged = road_hop_charged_bits(decomposition, ledger_dict)
         record = {
-            **{**result_metadata("cooperative_outer"), "model_version": "v2"},
+            **result_metadata("cooperative_outer"),
             "config": label, "topology": topology, "compressor": compressor,
             "cg_rounds": rounds, "network": args.network, "n_regions": args.k,
             "solver": solver, "warm_start": warm, "theta": args.theta,

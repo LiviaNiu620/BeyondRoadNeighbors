@@ -1,9 +1,8 @@
 # Run records
 
-These files are the evidence behind the paper. `paper/make_numbers.py` and
-`paper/make_figures.py` read them directly; the experiment scripts never write here (new runs
-go to `outputs/`). Each `.jsonl` file holds one JSON record per protocol; a `.log` file next to
-it is the console output of the same run.
+These files are the evidence behind the paper's tables, figures and text. `paper/make_numbers.py`
+reads them directly; the experiment scripts never write here (new runs go to `outputs/`). Each
+`.jsonl` file holds one JSON record per protocol.
 
 | Directory | Content |
 |---|---|
@@ -33,10 +32,6 @@ s, `K<k>` = k authorities, `SF8` = SiouxFalls with 8 authorities).
 | `per_agent_send_bits`, `per_agent_receive_bits` | communication load per authority |
 | `tstt_trace`, `bits_trace` | J and cumulative payload after every attempt |
 | `gradient_form` | `residual` (N λ_R + r_R, no final exchange) or `congestion` (b − C λ_R after a final product exchange) |
-
-The metadata fields `model_id`, `objective_id` and `wildfire_role` are labels inherited from an
-earlier objective contract of the codebase; the objective actually used is the exposure-weighted
-one printed on the first line of each `.log` file (`risk objective: {...}`).
 
 ## Single-state records
 

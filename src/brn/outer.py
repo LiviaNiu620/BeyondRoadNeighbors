@@ -36,7 +36,7 @@ from .distributed import (
     local_jacobi_preconditioner,
 )
 from .partition import communication_graph
-from .objective_contract import result_metadata
+from .records import result_metadata
 
 FloatArray = NDArray[np.float64]
 
